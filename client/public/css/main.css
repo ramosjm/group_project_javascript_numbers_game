@@ -101,12 +101,12 @@ input[type=submit]{
   background-color:#73C6B6;
 }
 
-#cards-number-container{
+#cards-number-container, #highest-number-container{
   font-size: 20px;
   padding: 15px;
 }
 
-#cardsNumber{
+#cardsNumber, #highestNumber{
   width: 50px;
   height: 20px;
   border-radius: 4px;
@@ -169,7 +169,7 @@ div p{
   display: none;
 }
 
-#play-game{
+#play-game , #max-number-btn{
   font-size:24px;
   color:black;
   margin-top: 40px;
