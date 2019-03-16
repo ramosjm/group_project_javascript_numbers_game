@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Magic Of Numbers</title>
+    <script src="/js/bundle.js"></script>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="icon" href="/css/abacus.png" type="image/png"/>
+  </head>
+  <body>
+    <h1>MAGIC OF NUMBERS</h1>
+    <h3>HOW TO PLAY:</h3>
+    <p id="game-instructions">Choose the number of cards to play with and you will be given a range of number to choose from. The computer will then try to guess which number you chose</p>
+    <form id="games-form" class="show">
+      <button type="button" id="number-of-cards-btn">Play with Cards</button>
+      <!-- <button type="button" id="max-number-btn">Play using Numbers</button> -->
+      <br>
+      <div class="hidden" id = "cards-number-container">
+        <label for="cardsNumber">Pick the number of cards to play with:</label>
+        <input type="number" id="cardsNumber"/>
+      </div>
+      <!-- <div class="hidden" id = "highest-number-container">
+        <label for="highestNumber">Choose the highest number to guess:</label>
+        <input type="number" id="highestNumber"/>
+      </div> -->
+      <h4 id="game-parameter-result"></h4>
+
+      <div id="game-parameters-container"></div>
+
+      <button type="button" id="play-game" class="hidden">Play</button>
+    </form>
+    <div class ="show" id ="board-view-container"></div>
+    <section id ="result-view-container"></section>
+
+  </body>
+</html>

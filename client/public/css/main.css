@@ -1,0 +1,186 @@
+body {
+  /* background-color: #F2F3F4; */
+  /* background-color: #709FB0; */
+  background-image: url("jj-ying-236821-unsplash.jpg");
+}
+
+.hidden{
+  display: none;
+  padding: 0px;
+}
+
+#board-view-container{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.card-container{
+  display: flex;
+  flex-wrap: wrap;
+  border: solid 2px black;
+  border-radius: 30px 30px;
+  /* background-color: #2980B9; */
+  /* background-color: #726A95; */
+  padding: 10px;
+  box-shadow: #283747 2px 2px;
+}
+
+p {
+  padding: 10px;
+  color: black;
+  font-weight: bold;
+}
+
+
+.btn-container{
+  width: 100%;
+  margin:auto;
+  padding: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.yes-btn{
+  font-size: 16px;
+  background-color:#52BE80;
+  font-weight: bold;
+  padding: 12px 28px;
+  border-radius: 6px;
+  align-self: center;
+}
+
+.yes-btn:hover{
+  background-color: #27AE60;
+}
+
+.no-btn{
+  font-size: 16px;
+  background-color:#EC7063;
+  font-weight: bold;
+  padding: 12px 28px;
+  border-radius: 6px;
+  align-self: center;
+}
+
+.no-btn:hover{
+  background-color: #E74C3C;
+}
+
+
+
+
+
+.result-button{
+  background-color:#A0C1B8; color: black;
+  font-size: 24px;
+}
+
+.result-button:hover{
+  background-color:#73C6B6;
+}
+
+input[type=submit]{
+  font-size:56px;
+  color:black;
+  padding:20px;
+  font-weight: bold;
+}
+
+
+#number-of-cards-btn {
+  font-size:24px;
+  color:black;
+  margin-top: 40px;
+  background-color: #A0C1B8;
+  border-radius: 4px;
+}
+
+#number-of-cards-btn:hover{
+  background-color:#73C6B6;
+}
+
+#cards-number-container{
+  font-size: 20px;
+  padding: 15px;
+}
+
+#cardsNumber{
+  width: 50px;
+  height: 20px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+h1 {
+  text-align: center;
+  text-shadow: 1px 1px grey;
+  font-family: arial;
+}
+
+
+.input.button{
+  font-size:20px;
+  color:black;
+}
+
+h4 {
+  font-size: 30px;
+  margin: 10px;
+}
+
+h3 {
+  font-family: sans-serif;
+}
+
+#game-instructions{
+  font-family: sans-serif;
+  border: solid 1px black;
+  border-radius: 6px;
+  padding:15px;
+  /* background-color: #85C1E9  ; */
+  /* background-color: #A0C1B8; */
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 30px;
+  font-family: sans-serif;
+}
+
+div p{
+  background-color: #A0C1B8;
+  /* background-color: #F2F3F4; */
+  border: border: solid 2px black;
+  border-radius: 22px;
+  margin: 4px;
+  /* background-color:#D7DBDD  ; */
+}
+
+#result-view-container, h2{
+  align-content: center;
+  text-align: center;
+  font-size: 70px;
+  margin: 10px;
+}
+
+#hidden{
+  display: none;
+}
+
+#play-game{
+  font-size:24px;
+  color:black;
+  margin-top: 40px;
+  background-color: #A0C1B8;
+  border-radius: 4px;
+}
+
+#play-again{
+  font-size:24px;
+  color:black;
+  margin-top: 40px;
+  background-color: #A0C1B8;
+  border-radius: 4px;
+}
