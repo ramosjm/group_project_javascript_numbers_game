@@ -10,21 +10,23 @@ FormView.prototype.setupEventListeners = function(){
   cardButton.addEventListener('click',function(evt){
     const inputBox = document.querySelector('#cards-number-container');
     inputBox.classList.replace('hidden','show');
-
     const inputtedNum = document.querySelector('#cardsNumber');
     inputtedNum.addEventListener('input', function(evt) {
       const playButton = document.querySelector('#play-game');
       playButton.classList.replace('hidden','show');
       PubSub.publish('FormView:number-inputted', evt.target.value);
 
-      playButton.addEventListener('click',function(){
-        const inputBoxValue = document.querySelector('#cards-number-container').value;
-        PubSub.publish('FormView:sumbit',inputBoxValue);
+      playButton.addEventListener('click',function(evt){
+        const inputBoxValue = document.querySelector('#cardsNumber').value;
+
         const formElement = document.querySelector('#games-form');
         formElement.classList.replace('show','hidden');
+        PubSub.publish('FormView:sumbit',inputBoxValue);
         });
       });
     });
+
+    //Play by numbers
 
   const numbersButton = document.querySelector('#max-number-btn');
   numbersButton.addEventListener('click',function(evt){
@@ -35,19 +37,18 @@ FormView.prototype.setupEventListeners = function(){
     inputtedNum.addEventListener('input', function(evt) {
       const playButton = document.querySelector('#play-game');
       playButton.classList.replace('hidden','show');
-      console.log(playButton);
-      console.log('number is:', evt.target.value);
+      console.log('input number', evt.target.value);
       PubSub.publish('FormView:highest-number-inputted', evt.target.value);
+    });
 
+    const playButton = document.querySelector('#play-game');
     playButton.addEventListener('click',function(){
-      const inputBoxValue = document.querySelector('#cards-number-container').value;
-      console.log(inputBoxValue);
-      PubSub.publish('FormView:sumbit',inputBoxValue);
-
+      const inputBoxValue = document.querySelector('#highestNumber').value;
       const formElement = document.querySelector('#games-form');
       formElement.classList.replace('show','hidden');
+      PubSub.publish('FormView:sumbit',inputBoxValue);
+      console.log('value from input box',inputBoxValue);
 
-      });
     });
   });
 };

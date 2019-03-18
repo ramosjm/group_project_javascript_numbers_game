@@ -15,7 +15,6 @@ InfoView.prototype.readInput = function() {
 
   PubSub.subscribe('Deck:highest-number-parameters', (evt) => {
     numberOfCards = evt.detail;
-
     const resultParameter = document.querySelector('#game-parameter-result');
     resultParameter.textContent = `This range will give you ${numberOfCards} card(s) to play with.`;
   });
@@ -28,7 +27,6 @@ InfoView.prototype.readInput = function() {
 
   PubSub.subscribe('FormView:highest-number-inputted', (evt) => {
     const inputtedNum = evt.detail;
-    console.log(inputtedNum);
     PubSub.publish('InfoView:highest-number-parameters-input', inputtedNum);
   });
 
