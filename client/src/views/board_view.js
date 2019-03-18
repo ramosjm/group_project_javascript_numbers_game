@@ -9,21 +9,22 @@ const BoardView = function (container) {
 BoardView.prototype.bindEvents = function(){
   PubSub.subscribe('Deck:card-data-Ready',(evt)=>{
     this.cards = evt.detail;
-    this.renderCardView(this.cards);
+    this.renderCardView();
   });
 };
 //get info from model (pubsub) subscribe and call renderCardView with the cards -- update this.cards with cards.
 
-BoardView.prototype.renderCardView = function(cards){
-  cards.forEach((card)=>{
-    const cardView = new CardView(card);
-    const cardDetail = cardView.createCardView();
-    this.container.appendChild(cardDetail)
-    this.addButtons(card);
-  });
+BoardView.prototype.renderCardView = function(index = 0){
+  const card = this.cards[index];
+  console.log(this.cards[1]);
+  const cardView = new CardView(card);
+  console.log(cardView);
+  const cardDetail = cardView.createCardView();
+  this.container.appendChild(cardDetail)
+  this.addButtons(card);
 };
 
-BoardView.prototype.addButtons = function(card){
+BoardView.prototype.addButtons = function(card, index){
   const buttonContainer = document.createElement('div');
   buttonContainer.classList.add('btn-container');
 
@@ -35,6 +36,9 @@ BoardView.prototype.addButtons = function(card){
     if (this.cards.length === (card.iteration +1)) {
       this.container.id = 'hidden';
       this.publishAnswers();
+    }else{
+      this.container.innerHTML = "";
+      this.renderCardView(card.iteration+1);
     };
   });
   buttonContainer.appendChild(yesButton);
@@ -47,7 +51,10 @@ BoardView.prototype.addButtons = function(card){
     if (this.cards.length === (card.iteration +1)) {
       this.container.id = 'hidden';
       this.publishAnswers();
-    }
+    }else{
+      this.container.innerHTML = "";
+      this.renderCardView(card.iteration+1);
+    };
   });
   buttonContainer.appendChild(noButton);
   this.container.appendChild(buttonContainer);

@@ -6,7 +6,7 @@ const CardView = function (prettyCard) {
 CardView.prototype.createCardView = function(){
   const div = document.createElement('div');
   div.classList.add('card-container');
-
+  console.log(this.prettyCard);
   const cardLabel = document.createElement('label');
   cardLabel.textContent = `Card # ${this.prettyCard.iteration+1}`;
 
