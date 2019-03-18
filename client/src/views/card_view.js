@@ -7,6 +7,11 @@ CardView.prototype.createCardView = function(){
   const div = document.createElement('div');
   div.classList.add('card-container');
 
+  const cardLabel = document.createElement('label');
+  cardLabel.textContent = `Card # ${this.prettyCard.iteration+1}`;
+
+  div.appendChild(cardLabel);
+
   this.container = div
   const numberElements = this.createParagraphElements();
 
