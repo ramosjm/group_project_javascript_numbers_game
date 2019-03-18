@@ -37,7 +37,8 @@ div p{
 }
 
 #board-view-container{
-  min-height: 100vh;
+  align-content: center;
+  text-align: center;
 
 }
 
@@ -94,6 +95,9 @@ div p{
   background-color:#73C6B6;
 }
 
+#games-form{
+  text-align: center;
+}
 
 #cards-number-container, #highest-number-container{
   font-size: 20px;
