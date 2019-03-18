@@ -15,16 +15,15 @@ FormView.prototype.setupEventListeners = function(){
       const playButton = document.querySelector('#play-game');
       playButton.classList.replace('hidden','show');
       PubSub.publish('FormView:number-inputted', evt.target.value);
-
+      });
+      const playButton = document.querySelector('#play-game');
       playButton.addEventListener('click',function(evt){
         const inputBoxValue = document.querySelector('#cardsNumber').value;
-
         const formElement = document.querySelector('#games-form');
         formElement.classList.replace('show','hidden');
         PubSub.publish('FormView:sumbit',inputBoxValue);
-        });
-      });
     });
+  });
 
     //Play by numbers
 
@@ -37,7 +36,6 @@ FormView.prototype.setupEventListeners = function(){
     inputtedNum.addEventListener('input', function(evt) {
       const playButton = document.querySelector('#play-game');
       playButton.classList.replace('hidden','show');
-      console.log('input number', evt.target.value);
       PubSub.publish('FormView:highest-number-inputted', evt.target.value);
     });
 
@@ -47,7 +45,6 @@ FormView.prototype.setupEventListeners = function(){
       const formElement = document.querySelector('#games-form');
       formElement.classList.replace('show','hidden');
       PubSub.publish('FormView:sumbit',inputBoxValue);
-      console.log('value from input box',inputBoxValue);
 
     });
   });
