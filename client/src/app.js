@@ -34,39 +34,9 @@ const resultViewContainer = document.querySelector('#result-view-container');
 const resultView = new ResultView();
 resultView.bindEvents();
 
-
-
-    //updates number of cards based on user input
-    // deck.updateNumberOfCards(#)
-    //returns the highest number
-    //deck.highestNumber
-    //PubSub.publishes  cdskhvsdfigsdfkj
-
-
-
-
-//
-// on addEventListener -- user wants highest number
-    //
-    // deck.updateHighestNumber(userInput);
-    // deck.generateCards();
-    //
-    // //on addEventListener -- user wants number of cards
-    //
-    // deck.updateNumberOfCards(userInput);
-    // deck.generateCards();
-
 const boardViewContainer = document.querySelector('#board-view-container');
-
-
 const boardView = new BoardView(boardViewContainer);
 boardView.bindEvents();
-
-
-
-
-
-
 
 
 });
