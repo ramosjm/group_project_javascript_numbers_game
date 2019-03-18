@@ -95,17 +95,12 @@ div p{
   background-color:#73C6B6;
 }
 
-#number-of-cards-btn {
-  font-size:24px;
-  color:black;
-  margin-top: 40px;
-  background-color: #A0C1B8;
-  border-radius: 4px;
+#games-form{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 30%;
 }
 
-#number-of-cards-btn:hover{
-  background-color:#73C6B6;
-}
 
 #cards-number-container, #highest-number-container{
   font-size: 20px;
@@ -143,12 +138,16 @@ div p{
   display: none;
 }
 
-#play-game , #max-number-btn{
+#play-game , #max-number-btn,#number-of-cards-btn{
   font-size:24px;
   color:black;
-  margin-top: 40px;
+  margin-top: 20px;
   background-color: #A0C1B8;
   border-radius: 4px;
+}
+
+#number-of-cards-btn:hover{
+  background-color:#73C6B6;
 }
 
 #play-again{
