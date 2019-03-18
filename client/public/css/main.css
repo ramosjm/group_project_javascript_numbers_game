@@ -37,6 +37,7 @@ div p{
 }
 
 #board-view-container{
+  min-height: 100vh;
 
 }
 
@@ -48,7 +49,6 @@ div p{
   padding: 10px;
   box-shadow: #283747 2px 2px;
   font-size: 24pt;
-  /* min-height: 100vh; */
 }
 
 .btn-container{

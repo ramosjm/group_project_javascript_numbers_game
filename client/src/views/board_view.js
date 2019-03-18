@@ -16,9 +16,7 @@ BoardView.prototype.bindEvents = function(){
 
 BoardView.prototype.renderCardView = function(index = 0){
   const card = this.cards[index];
-  console.log(this.cards[1]);
   const cardView = new CardView(card);
-  console.log(cardView);
   const cardDetail = cardView.createCardView();
   this.container.appendChild(cardDetail)
   this.addButtons(card);
