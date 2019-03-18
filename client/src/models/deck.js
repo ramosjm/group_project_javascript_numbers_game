@@ -29,18 +29,15 @@ Deck.prototype.bindEvents = function(){
 
   PubSub.subscribe('InfoView:highest-number-parameters-input', (evt) => {
     const inputtedNum = evt.detail;
-    console.log('highest number taken from user input',evt.detail);
 
     this.highestNumber = inputtedNum;
     this.calculateNumberOfCards();
 
     PubSub.publish('Deck:highest-number-parameters', this.numberOfCards);
-    console.log(' deck publises the game parameters to info view. These are: highest Number',this.highestNumber,' Number of cards:',this.numberOfCards);
   });
 
   PubSub.subscribe('FormView:sumbit',(evt)=>{
     this.updateNumberOfCards(evt.detail);
-    console.log('this is done before generate cards is ran',evt.detail);
     this.generateCards();
   });
   PubSub.subscribe('BoardView:answer-ready', (evt) => {
@@ -95,7 +92,6 @@ Deck.prototype.calculateHighestNumber = function () {
 //generateCards - create a card and push it into this.cards based on this.numberOfCards // ***this will be called from App.js
 
 Deck.prototype.generateCards = function(){
-  console.log('number of cards to generate',this.numberOfCards);
   for (let iteration = 0; iteration < this.numberOfCards; iteration ++){
     const card = new Card(iteration, this.numberOfCards);
     card.createCard();
@@ -104,10 +100,7 @@ Deck.prototype.generateCards = function(){
   PubSub.publish('Deck:card-data-Ready',this.cards);
 };
 
-
-
-// use this.cards - loop through each card
-// if card.containsGuessedNumber is true sum the first element of the array of each card.
+// use this.cards - loop through each card if card.containsGuessedNumber is true sum the first element of the array of each card.
 // publish total sum.
 //*** this will come from app.js
 

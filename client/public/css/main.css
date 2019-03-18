@@ -21,8 +21,6 @@ body {
   flex-wrap: wrap;
   border: solid 2px black;
   border-radius: 30px 30px;
-  /* background-color: #2980B9; */
-  /* background-color: #726A95; */
   padding: 10px;
   box-shadow: #283747 2px 2px;
 }
@@ -68,10 +66,6 @@ p {
   background-color: #E74C3C;
 }
 
-
-
-
-
 .result-button{
   background-color:#A0C1B8; color: black;
   font-size: 24px;
@@ -80,14 +74,6 @@ p {
 .result-button:hover{
   background-color:#73C6B6;
 }
-
-input[type=submit]{
-  font-size:56px;
-  color:black;
-  padding:20px;
-  font-weight: bold;
-}
-
 
 #number-of-cards-btn {
   font-size:24px;
@@ -107,7 +93,7 @@ input[type=submit]{
 }
 
 #cardsNumber, #highestNumber{
-  width: 50px;
+  width: 60px;
   height: 20px;
   border-radius: 4px;
   font-size: 14px;
@@ -139,8 +125,6 @@ h3 {
   border: solid 1px black;
   border-radius: 6px;
   padding:15px;
-  /* background-color: #85C1E9  ; */
-  /* background-color: #A0C1B8; */
   font-size: 20px;
 }
 
@@ -151,11 +135,9 @@ h2 {
 
 div p{
   background-color: #A0C1B8;
-  /* background-color: #F2F3F4; */
   border: border: solid 2px black;
   border-radius: 22px;
   margin: 4px;
-  /* background-color:#D7DBDD  ; */
 }
 
 #result-view-container, h2{
