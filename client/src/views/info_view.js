@@ -1,16 +1,7 @@
 const PubSub = require('../helpers/pub_sub.js');
 
 const InfoView = function () {
-  //this.information = information
 };
-
-
-// InfoView.prototype.bindEvents = function () {
-//   PubSub.subscribe('FormView:number-submitted', (evt) => {
-//     const numberSubmitted = evt.detail.value;
-//     this.displayGameParameter(gameParameter);
-//   });
-// };
 
 
 InfoView.prototype.readInput = function() {

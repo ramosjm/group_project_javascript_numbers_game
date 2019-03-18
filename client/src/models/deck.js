@@ -34,7 +34,6 @@ Deck.prototype.bindEvents = function(){
     this.highestNumber = inputtedNum;
     this.calculateNumberOfCards();
 
-    console.log(this.numberOfCards);
     PubSub.publish('Deck:highest-number-parameters', this.numberOfCards);
   });
 
@@ -83,8 +82,6 @@ Deck.prototype.calculateNumberOfCards = function(){
   const numberOfCards = Math.ceil(base2);
   this.numberOfCards = numberOfCards;
 };
-
-
 
 
  //This fn power number of cards to a base 2 and sets the highest number.
