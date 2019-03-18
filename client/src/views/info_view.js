@@ -22,31 +22,26 @@ InfoView.prototype.readInput = function() {
     resultParameter.textContent = `Choose a number from 1 to ${highestNumberParameter}.`;
   });
 
+  PubSub.subscribe('Deck:highest-number-parameters', (evt) => {
+    numberOfCards = evt.detail;
+
+    const resultParameter = document.querySelector('#game-parameter-result');
+    resultParameter.textContent = `This range will give you ${numberOfCards} card(s) to play with.`;
+  });
+
 
   PubSub.subscribe('FormView:number-inputted', (evt) => {
-
-
     const inputtedNum = evt.detail;
-
     PubSub.publish('InfoView:game-parameters-input', inputtedNum);
+  });
 
-  })
+  PubSub.subscribe('FormView:highest-number-inputted', (evt) => {
+    const inputtedNum = evt.detail;
+    console.log(inputtedNum);
+    PubSub.publish('InfoView:highest-number-parameters-input', inputtedNum);
+  });
+
 };
-
-
-// This view sends information to FormView about the highest number to choose from or
-// how many cards to play with
-//
-// Subscribes from model
-// Channel: Cards:game-parameters-submitted
-// (Deck model publishes)
-
-//InfoView.prototype.bindEvents = function() {
-  //PubSub.subscribe('Cards:game-parameters-submitted', (evt) => {
-
-//}
-
-
 
 
 module.exports = InfoView;

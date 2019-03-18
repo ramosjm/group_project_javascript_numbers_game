@@ -30,14 +30,14 @@ FormView.prototype.setupEventListeners = function(){
   numbersButton.addEventListener('click',function(evt){
     inputBox1 = document.querySelector('#highest-number-container');
     inputBox1.classList.replace('hidden','show');
-    console.log(inputBox1);
 
     const inputtedNum = document.querySelector('#highestNumber');
     inputtedNum.addEventListener('input', function(evt) {
       const playButton = document.querySelector('#play-game');
       playButton.classList.replace('hidden','show');
       console.log(playButton);
-      PubSub.publish('FormView:number-inputted', evt.target.value);
+      console.log('number is:', evt.target.value);
+      PubSub.publish('FormView:highest-number-inputted', evt.target.value);
 
     playButton.addEventListener('click',function(){
       const inputBoxValue = document.querySelector('#cards-number-container').value;

@@ -27,6 +27,17 @@ Deck.prototype.bindEvents = function(){
     PubSub.publish('Deck:game-parameters', highestNumberParameter);
   });
 
+  PubSub.subscribe('InfoView:highest-number-parameters-input', (evt) => {
+    const inputtedNum = evt.detail;
+    console.log(evt.detail);
+
+    this.highestNumber = inputtedNum;
+    this.calculateNumberOfCards();
+
+    console.log(this.numberOfCards);
+    PubSub.publish('Deck:highest-number-parameters', this.numberOfCards);
+  });
+
   PubSub.subscribe('FormView:sumbit',(evt)=>{
     this.updateNumberOfCards(evt.detail);
     this.generateCards();
@@ -35,7 +46,7 @@ Deck.prototype.bindEvents = function(){
     this.cards = evt.detail;
     const guessedNumber = this.calculateGuessedNumber();
     PubSub.publish('Deck:result-submitted', guessedNumber);
-  })
+  });
 };
 
 
