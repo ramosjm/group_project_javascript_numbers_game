@@ -41,7 +41,7 @@ ResultView.prototype.showResultButton = function (result){
     const playAgain = document.createElement('button');
     playAgain.textContent = 'Play Again';
     playAgain.id = 'play-again';
-    
+
     this.resultContainer.appendChild(result);
     this.resultContainer.appendChild(playAgain);
     button.classList.replace('result-button','hidden');
@@ -59,14 +59,7 @@ ResultView.prototype.showResultButton = function (result){
 
   });
     return button;
-  };
-
-
-//in model add
-// Deck.prototype.bindEvents = function() {
-//   const result = this.calculateGuessedNumber();
-//   PubSub.publish('Deck:result-submitted', result);
-// }
+};
 
 
 module.exports = ResultView;

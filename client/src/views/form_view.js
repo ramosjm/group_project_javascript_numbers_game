@@ -41,7 +41,9 @@ FormView.prototype.setupEventListeners = function(){
 
     playButton.addEventListener('click',function(){
       const inputBoxValue = document.querySelector('#cards-number-container').value;
+      console.log(inputBoxValue);
       PubSub.publish('FormView:sumbit',inputBoxValue);
+
       const formElement = document.querySelector('#games-form');
       formElement.classList.replace('show','hidden');
 

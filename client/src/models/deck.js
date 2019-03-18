@@ -39,6 +39,7 @@ Deck.prototype.bindEvents = function(){
 
   PubSub.subscribe('FormView:sumbit',(evt)=>{
     this.updateNumberOfCards(evt.detail);
+    console.log(evt.detail);
     this.generateCards();
   });
   PubSub.subscribe('BoardView:answer-ready', (evt) => {
