@@ -3,7 +3,7 @@
 
 Welcome to the JS Numbers game.
 
-Group Project done in 1 week as part of a group of 3.
+Group Project completed in 1 week as part of a group of 3.
 
 The brief was to create a game. We chose a concept of a game where we are able to guess a user's chosen number from a range.
 
